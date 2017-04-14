@@ -17,12 +17,14 @@ int main()
   {
     for(int j = i; j <= 999; j++)
     {
+
       const int product = i * j; 
 
       if(product > largestPalindrome && isPalindrome(product))
       {
         largestPalindrome = i * j;
       }
+
     }
   }
 
