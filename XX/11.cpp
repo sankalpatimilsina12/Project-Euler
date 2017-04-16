@@ -62,7 +62,6 @@ int main()
   /* Remove spaces in the GRID string */
   GRID.erase(std::remove(GRID.begin(), GRID.end(), ' '), GRID.end());
 
-
   /* Construct a vector in memory containing all data */
   std::vector<int> data;
 
