@@ -12,14 +12,9 @@ int main()
   int sum = 0;
 
   for(int i = 3; i < LIMIT; i++)
-  {
     if(i % 3 == 0 or i % 5 == 0)
-    {
       sum += i;
-    }
-  }
 
   std::cout << "The required sum is: " << sum << std::endl;
-
   return 0;
 }

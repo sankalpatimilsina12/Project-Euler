@@ -213,11 +213,11 @@ int main()
       "20849603980134001723930671666823555245252804609722"
       "53503534226472524250874054075591789781264330331690";
 
-  long int
+  long long int
           array1[5] = {0, 0, 0, 0, 0},  // Each array holds 5 elements where each element
           array2[5] = {0, 0, 0, 0, 0};  // is 10 digits long ie. 50 digits(or a row) in total.
                                        
-  long int sum[5] = {0, 0, 0, 0, 0};
+  long long int sum[5] = {0, 0, 0, 0, 0};
 
   /*
    Get first two rows in the arrays and sum them. Then, proceed to next two
@@ -238,7 +238,7 @@ int main()
       }
     }
 
-    long int tempSum = 0;
+    long long int tempSum = 0;
     int carry = 0;
 
     for(int j = 4; j >= 0; j--)

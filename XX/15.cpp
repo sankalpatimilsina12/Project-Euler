@@ -11,7 +11,7 @@ How many such routes are there through a 20×20 grid?
 
 int main()
 {
-  long int array[21][21]; // We need 21 * 21 because 21 total points make 20 boxes.
+  long long int array[21][21]; // We need 21 * 21 because 21 total points make 20 boxes.
 
   // Fill out the outermost row line and column line by one. 
   for(int i = 1; i < 21; i++)

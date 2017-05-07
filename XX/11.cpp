@@ -66,9 +66,7 @@ int main()
   std::vector<int> data;
 
   for(int i = 0; i < GRID.length(); i = i + 2)
-  {
     data.push_back((GRID[i] - '0') * 10 + (GRID[i + 1] - '0'));
-  }
 
   for(int i = 0, rowCount = 0; i < data.size(); i++)
   {
@@ -79,28 +77,20 @@ int main()
       diagLeft  = 0;
 
     if(i % 20 == 0)
-    {
       rowCount++;
-    }
 
     if(i  <= rowCount * 20 - 4)
-    {
       right = data[i] * data[i + 1] * data[i + 2] * data[i + 3];
-    }
 
     if(i < 17 * 20)
     {
       down = data[i] * data[i + 20] * data[i + 40] * data[i + 60];
 
       if(i <= rowCount * 20 - 4)
-      {
         diagRight = data[i] * data[i + 1 + 20] * data[i + 2 + 40] * data[i + 3 + 60];
-      }
 
       if(i >= rowCount * 20 - 16)
-      {
         diagLeft = data[i] * data[i - 1 + 20] * data[i - 2 + 40] * data[i - 3 + 60];
-      }
     }
 
     product = (right > product) ? right : product;

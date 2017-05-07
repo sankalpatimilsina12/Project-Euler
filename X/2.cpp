@@ -32,9 +32,7 @@ int main()
     since it is first divisible even number.
     */
     if(second % 2 == 0)
-    {
       sum += second;
-    }
 
     /* Continue the fibonacci. */
     third  = first + second;

@@ -21,7 +21,6 @@ int main()
       if(j == 20 and (i / j) % 2 == 0)
         flag = true;
     }
-
     if(flag)
       break;
   }

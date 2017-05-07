@@ -39,9 +39,7 @@ int main()
     index++;
 
     if(getTotalFactors(lastTriangleNum) > LIMIT)
-    {
       break;
-    }
   }
 
   std::cout << "The first triangle number to have over "<< LIMIT << " divisors is: " << lastTriangleNum << std::endl;
@@ -79,9 +77,7 @@ int getTotalFactors(int num)
       num /= i;
     }
     else
-    {
       i++;
-    }
   }
 
   /* Calculate the exponents */
@@ -94,39 +90,29 @@ int getTotalFactors(int num)
 
     // Initialize count to 1 if element is not 0.
     if(Composition[i] != 0)
-    {
       count = 1;
-    }
     else
-    {
       count = 0;
-    }
 
     for(int j = i + 1; j < Composition.size(); j++)
-    {
       if(Composition[i] == Composition[j] && Composition[i] != 0)
       {
         Composition[j] = 0;
         count++;
       }
-    }
     
     Exponents.push_back(count);
   }
 
   /* Add the exponents each by 1 */
   for(int i = 0; i < Exponents.size(); i++)
-  {
     Exponents[i] += 1;
-  }
 
   /* Multiply the exponents */
   int totalFactors = 1;
 
   for(int i = 0; i < Exponents.size(); i++)
-  {
     totalFactors *= Exponents[i];
-  }
 
   return totalFactors;
 }

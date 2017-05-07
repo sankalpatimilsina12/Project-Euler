@@ -14,19 +14,13 @@ int main()
   int largestPalindrome = 0;
 
   for(int i = 100; i <= 999; i++)
-  {
     for(int j = i; j <= 999; j++)
     {
-
       const int product = i * j; 
 
       if(product > largestPalindrome && isPalindrome(product))
-      {
         largestPalindrome = i * j;
-      }
-
     }
-  }
 
   std::cout << "The largest palindrome is: " << largestPalindrome << std::endl;
   return 0;

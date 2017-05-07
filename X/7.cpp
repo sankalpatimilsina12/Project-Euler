@@ -17,12 +17,8 @@ int main()
     i;
 
   for(i = 2; primeCount < POSITION; i++)
-  {
     if(isPrime(i))
-    {
       primeCount++;
-    }
-  }
 
   i--;  // This needs to be done because the value of i will increase by 1 after the loop.
 
@@ -33,10 +29,8 @@ int main()
 bool isPrime(int x)
 {
   for(int i = 2; i <= sqrt(x); i++)
-  {
     if(x % i == 0)
       return false;
-  }
 
   return true;
 }

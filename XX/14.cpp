@@ -23,13 +23,13 @@ int main()
 {
   const int LIMIT = 1000000;
 
-  long longestChainNum = 0;
+  long long int longestChainNum = 0;
   int countChain = 0;
 
   for(int i = 2; i < LIMIT; i++)
   {
     int tempCount = 0;
-    long tempNum = i;
+    long long int tempNum = i;
 
     while(tempNum != 1)
     {

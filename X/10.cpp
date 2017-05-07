@@ -12,16 +12,11 @@ bool isPrime(int);
 int main()
 {
   const int LIMIT = 2000000;
-
-  long int sum = 0;
+  long long int sum = 0;
 
   for(int i = 2; i < LIMIT; i++)
-  {
     if(isPrime(i))
-    {
       sum += i;
-    }
-  }
 
   std::cout << "The sum is: " << sum << std::endl;
   return 0;
@@ -30,10 +25,8 @@ int main()
 bool isPrime(int x)
 {
   for(int i = 2; i <= sqrt(x); i++)
-  {
     if(x % i == 0)
       return false;
-  }
 
   return true;
 }
