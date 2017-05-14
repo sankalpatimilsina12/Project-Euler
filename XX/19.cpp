@@ -28,7 +28,7 @@ int main()
       Year = 1900,
       sundayCount = 0;
 
-  for(Year = 1900; Year <= 2000; Year++)
+  for(Year; Year <= 2000; Year++)
     for(int j = 1; j <= 12; j++) {
       int temp;
 
