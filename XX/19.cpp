@@ -31,7 +31,7 @@ int main()
   for(Year = 1900; Year <= 2000; Year++)
     for(int j = 1; j <= 12; j++) {
       int temp;
-      
+
       if(j == 2 and (Year % 4 == 0) and (Year % 100 != 0 or Year % 400 == 0))
         temp = (Months[13][1][0] - '0') * 10 + Months[13][1][1] - '0';
       else 
@@ -45,6 +45,9 @@ int main()
       switch(Year) {
         case 1900:
             break;
+        case 2000:
+            if(j == 12)
+              break;
         default:
             if(Day == 1)
               sundayCount++;
