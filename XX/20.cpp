@@ -49,7 +49,7 @@ int main()
 
   // Find the sum
   int sum = 0;
-  for(int i = 0; i < Num.length() - 1; i++)
+  for(int i = 0; i < Num.length(); i++)
     sum += Num[i] - '0';
 
   std::cout << "The sum of the digits is: " << sum << std::endl;
