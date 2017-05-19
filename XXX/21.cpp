@@ -10,15 +10,15 @@ Evaluate the sum of all the amicable numbers under 10000.
 
 #include <iostream>
 
-int factorsSum(int);
+int propDivSum(int);
 
 int main() {
   const int LIMIT = 10000;
   int sum = 0;
 
   for(int i = 1; i < LIMIT; i++) {
-    int a = factorsSum(i);
-    int b = factorsSum(a);
+    int a = propDivSum(i);
+    int b = propDivSum(a);
 
     if(i == b and a != b)             // Verify the conditions.
       sum += i;
@@ -28,7 +28,7 @@ int main() {
   return 0;
 }
 
-int factorsSum(int num) {
+int propDivSum(int num) {
   int sum = 0;
 
   for(int i = 1; i <= num / 2; i++)
