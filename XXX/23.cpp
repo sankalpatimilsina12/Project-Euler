@@ -30,9 +30,7 @@ int main() {
   // Find all the possible sums combination of abundant numbers.
   std::vector<bool> abunSums(LIMIT, false);
   for(int i = 0; i <= Abun.size() / 2; i++) {
-    if(2 * Abun[i] <= LIMIT)
-      abunSums[2 * Abun[i]] = true;
-    for(int j = i + 1; j < Abun.size(); j++)
+    for(int j = i; j < Abun.size(); j++)
       if(Abun[i] + Abun[j] <= LIMIT)  
         abunSums[Abun[i] + Abun[j]] = true;
   }
