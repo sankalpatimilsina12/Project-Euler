@@ -28,16 +28,15 @@ int main() {
       Abun.push_back(i);
 
   // Find all the possible sums combination of abundant numbers.
-  std::vector<bool> abunSums(LIMIT, false);
-  for(int i = 0; i <= Abun[i] / 2; i++) {
+  std::vector<bool> abunSums(LIMIT + 1, false);
+  for(int i = 0; i <= Abun[i] / 2; i++)
     for(int j = i; j < Abun.size(); j++)
       if(Abun[i] + Abun[j] <= LIMIT)  
         abunSums[Abun[i] + Abun[j]] = true;
-  }
 
   // Find the non-abundant sum.
   long int sum = 0;
-  for(int i = 1; i <= LIMIT; i++)
+  for(int i = 1; i <= LIMIT; i++) // Check from positive number ie. 1. abunSums[0] is false.
     if(!abunSums[i])  
       sum += i;  
 
