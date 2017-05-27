@@ -33,8 +33,8 @@
    */
 
    std::string digits = "0123456789";
-   const int LIMIT = 1000000;
-   int count = 1;
+   const long int LIMIT = 1000000;
+   long int count = 1;
 
    for(; count != LIMIT; count++) {
      int largestX = getLargestIndex(digits);
