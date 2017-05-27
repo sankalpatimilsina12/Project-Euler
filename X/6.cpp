@@ -19,18 +19,19 @@ hundred natural numbers and the square of the sum.
 
 int main()
 {
-  int
+  long int
     sumOfSquares = 0,
-    sum          = 0,
     squareOfSum;
+
+  int sum = 0;
 
   for(int i = 1; i <= 100; i++)
   {
-    sumOfSquares += pow(i, 2);
+    sumOfSquares += i * i;
     sum          += i;
   }
 
-  squareOfSum = pow(sum, 2);
+  squareOfSum = sum * sum;
 
   std::cout << "The difference is: " << squareOfSum - sumOfSquares << std::endl;
   return 0;

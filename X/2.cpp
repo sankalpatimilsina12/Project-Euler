@@ -12,14 +12,9 @@ find the sum of the even-valued terms.
 
 int main()
 {
-  /* 
-  For a typical 32-bit operating system, an int takes 4 bytes.
-  Hence a signed int ranges from -2,147,483,648 to 2,147,483,647. 
-  */
+  const long int LIMIT = 4000000;
 
-  const int LIMIT = 4000000;
-
-  int 
+  long int 
       first  = 1,
       second = 2,
       third,

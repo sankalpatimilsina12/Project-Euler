@@ -21,12 +21,12 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 
 int main()
 {
-  const int LIMIT = 1000000;
+  const long int LIMIT = 1000000;
 
   long long int longestChainNum = 0;
   int countChain = 0;
 
-  for(int i = 2; i < LIMIT; i++)
+  for(long int i = 2; i < LIMIT; i++)
   {
     int tempCount = 0;
     long long int tempNum = i;

@@ -7,14 +7,14 @@ Find the sum of all the primes below two million.
 #include <iostream>
 #include <cmath>
 
-bool isPrime(int);
+bool isPrime(long int);
 
 int main()
 {
-  const int LIMIT = 2000000;
+  const long int LIMIT = 2000000;
   long long int sum = 0;
 
-  for(int i = 2; i < LIMIT; i++)
+  for(long int i = 2; i < LIMIT; i++)
     if(isPrime(i))
       sum += i;
 
@@ -22,7 +22,7 @@ int main()
   return 0;
 }
 
-bool isPrime(int x)
+bool isPrime(long int x)
 {
   for(int i = 2; i <= sqrt(x); i++)
     if(x % i == 0)
