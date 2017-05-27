@@ -36,22 +36,27 @@
    const long int LIMIT = 1000000;
    long int count = 1;
 
-   for(; count != LIMIT; count++) {
-     int largestX = getLargestIndex(digits);
-     bool isPermutationLast = (largestX == -1);
-     if(!isPermutationLast) {
+  if(digits.length() == 1)
+    goto stdout;
+
+  for(; count != LIMIT; count++) {
+    int largestX = getLargestIndex(digits);
+    bool isPermutationLast = (largestX == -1);
+    if(!isPermutationLast) {
       int largestY = getLargestIndex(digits, largestX);
       swapIndices(digits, largestX, largestY);
       reverseStringFromIndex(digits, largestX + 1);
-     }
-     else
+    }
+    else
       break;
    }
 
-   if(count == LIMIT)
-    std::cout << "The " << count << "th lexicographic permutation of the given digits is: " << digits << std::endl;
-   else 
-    std::cout << "The last maximum " << count << "th lexicographic permutation of the given digits is: " << digits << std::endl;
+  stdout: {
+    if(count == LIMIT)
+      std::cout << "The " << count << "th lexicographic permutation of the given digits is: " << digits << std::endl;
+    else 
+      std::cout << "The last maximum " << count << "th lexicographic permutation of the given digits is: " << digits << std::endl;
+  }
 
    return 0;
  }
