@@ -34,15 +34,25 @@
 
    std::string digits = "0123456789";
    const int LIMIT = 1000000;
+   int count = 1;
 
-   for(int count = 1; count != LIMIT; count++) {
+   for(; count != LIMIT; count++) {
      int largestX = getLargestIndex(digits);
-     int largestY = getLargestIndex(digits, largestX);
-     swapIndices(digits, largestX, largestY);
-     reverseStringFromIndex(digits, largestX + 1);
+     bool isPermutationLast = (largestX == -1);
+     if(!isPermutationLast) {
+      int largestY = getLargestIndex(digits, largestX);
+      swapIndices(digits, largestX, largestY);
+      reverseStringFromIndex(digits, largestX + 1);
+     }
+     else
+      break;
    }
 
-   std::cout << "The millionth lexicographic permutation of the given digits is: " << digits << std::endl;
+   if(count == LIMIT)
+    std::cout << "The " << count << "th lexicographic permutation of the given digits is: " << digits << std::endl;
+   else 
+    std::cout << "The last maximum " << count << "th lexicographic permutation of the given digits is: " << digits << std::endl;
+
    return 0;
  }
 
