@@ -33,12 +33,12 @@ int main() {
 
   while(third.length() != 1000) {
     std::string sumStr = "";
-    int sum = 0, carry = 0;
+    int sum, carry = 0;
+
+    // Make the length of 'first' and 'second' same.
+    first = std::string(second.length() - first.length(), '0').append(first);
 
     for(int i = second.length() - 1; i >= 0; i--) {
-      // Make the length of 'first' and 'second' same.
-      first = std::string(second.length() - first.length(), '0').append(first);
-
       sum = first[i] - '0' + second[i] - '0' + carry;
       carry = sum / 10;
       sumStr += (sum % 10) + '0';
@@ -50,12 +50,8 @@ int main() {
     for(int i = sumStr.length() - 1; i >= 0; i--)
       third += sumStr[i];
     
-    for(int i = 0; i < first.length(); i++)
-      first[i] = second[i];  
-      
-    second = "";
-    for(int i = 0; i < third.length(); i++)
-      second += third[i];  
+    first = second;
+    second = third;
 
     count++;
   }
