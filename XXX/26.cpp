@@ -33,11 +33,12 @@ int main() {
     int rem = 1;
 
     for(int j = 0; j < i; j++) {
-      rem = (rem * 10) % i;
+      rem %= i;
       if(rem == 1 and j > 0) { // When rem = 1 again, the values will start repeating.
         (j > largestRecurrenceCount) ? (largestRecurrenceCount = j, largestDenom = i) : 1;
         break;
       }
+      rem *= 10;
     }
   }
 
