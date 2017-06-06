@@ -51,7 +51,7 @@ int main() {
 }
 
 bool isPrime(int num) {
-  if(num < 0 or num == 0 or num == 1)
+  if(num <= 1)
     return false;
 
   for(int i = 2; i <= sqrt(num); i++)
