@@ -31,7 +31,7 @@ int main() {
   for(long i = 10; i <= LIMIT; i++) {
     long tempI = i, sum = 0;
     while(tempI) {
-      int tempJ = 1;
+      long tempJ = 1;
       for(int j = 0; j < 5; j++) {
         tempJ *= tempI % 10;
       }
