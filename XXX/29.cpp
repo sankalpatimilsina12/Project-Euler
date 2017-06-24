@@ -54,7 +54,7 @@ std::string getPowered(int a, int b) {
   for(int i = 1; i < b; i++) {
     int carry = 0;
     std::string tempStr;
-    // Mulitply the current number by 'b'.
+    // Mulitply the current number by 'a'.
     for(int j = strNum.length() - 1; j >= 0; j--) {
       int prod = (strNum[j] - '0') * a + carry;
       tempStr += (prod % 10 + '0');
