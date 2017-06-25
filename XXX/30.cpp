@@ -13,7 +13,6 @@
 */
 
 #include <iostream>
-#include <vector>
 
 /**
   For 6-digit num: Max possible value: 999999. So, fifth power of every digit and its sum is: 6 * 9 ^ 5 = 354294.
@@ -26,27 +25,22 @@
 
 int main() {
   const long LIMIT = 354294;
-  std::vector<long> Numbers;
+  long sum = 0;
 
   for(long i = 10; i <= LIMIT; i++) {
-    long tempI = i, sum = 0;
+    long tempI = i, tempSum = 0;
     while(tempI) {
       long tempJ = 1;
       for(int j = 0; j < 5; j++) {
         tempJ *= tempI % 10;
       }
-      sum += tempJ;
+      tempSum += tempJ;
       tempI /= 10;
     }
-    if(i == sum)
-      Numbers.push_back(i);
+    if(i == tempSum)
+      sum += i;
   }
 
-  // Find the sum of the numbers in the vector.
-  long sum = 0;
-  for(int i = 0; i < Numbers.size(); i++)
-    sum += Numbers[i];
-  
   std::cout << "The sum is: " << sum << std::endl;
   return 0;
 }
