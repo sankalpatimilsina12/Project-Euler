@@ -17,7 +17,7 @@ int main() {
       for(int f = 0; f + g + h <= 200; f += 50)
         for(int e = 0; e + f + g + h <= 200; e += 20)
           for(int d = 0; d + e + f + g + h <= 200; d += 10)
-            for(int c = 0; c + d + e + f + g + h<= 200; c += 5)
+            for(int c = 0; c + d + e + f + g + h <= 200; c += 5)
               for(int b = 0; b + c + d + e + f + g + h <= 200; b += 2)
                 for(int a = 0; a + b + c + d + e + f + g + h <= 200; a++)
                   if(a + b + c + d + e + f + g + h == 200)
