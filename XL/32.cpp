@@ -31,7 +31,6 @@ int main() {
   */
   std::vector<int> pandigitalProducts;
 
-
   for(int i = 1; i < 100; i++)
     for(int j = 111; j < 10000; j++) {
       if(getLength(i) + getLength(j) + getLength(i * j) == 9) {
