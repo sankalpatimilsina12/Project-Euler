@@ -24,7 +24,7 @@ int main() {
       i. 1 digit multiplicand and 4 digit multiplier or vice versa giving 4 digit product.
       ii. 2 digit multiplicand and 3 digit multiplier or vice versa giving 4 digit product.
 
-    For the first case, it is 1 through 99 and 1111 through 9999.
+    For the first case, it is 1 through 9 and 1111 through 9999.
     For the second case, it is 11 through 99 and 111 through 999.
 
     Combining and generalizing, we can say, the cases are 1 through 99 and 111 through 9999.
