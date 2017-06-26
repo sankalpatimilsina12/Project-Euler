@@ -82,15 +82,11 @@ bool checkPandigital(int multiplicand, int multiplier, int product) {
   }
   std::sort(digitContainer.begin(), digitContainer.end());
 
-  int count = 0;
+  if(digitContainer[0] == 0)
+    return false;
   for(int i = 0; i < digitContainer.size() - 1; i++)
-    if((digitContainer[i] != digitContainer[i + 1]) and digitContainer[i] != 0)
-      count++;
-  if(digitContainer[digitContainer.size() - 1] != 0) // For the last number.
-    count++; 
+    if(digitContainer[i] == digitContainer[i + 1])
+      return false;
 
-  if(count == 9)
-    return true;
-
-  return false;
+  return true;
 }
