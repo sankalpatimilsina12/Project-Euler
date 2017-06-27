@@ -33,11 +33,12 @@ int main() {
 
   for(int i = 1; i < 100; i++)
     for(int j = 111; j < 10000; j++) {
-      if(getLength(i) + getLength(j) + getLength(i * j) == 9) {
+      int lenSum = getLength(i) + getLength(j) + getLength(i * j);
+      if(lenSum == 9) {
         if(checkPandigital(i, j, i * j)) 
           pandigitalProducts.push_back(i * j);
       }
-      else if(getLength(i) + getLength(j) + getLength(i * j) > 9)
+      else if(lenSum > 9)
         break;
     }
   
