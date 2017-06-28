@@ -18,6 +18,7 @@ void getCommonRemoved(int &, int &);
 int main() {
   int numerator = 1, denom = 1;
 
+  // Find the numerator product and denominator product of the four non-trivial fractions.
   for(int i = 10; i < 100; i++)
     for(int j = i + 1; j < 100; j++) {
       int tempI = i, tempJ = j;
@@ -29,6 +30,7 @@ int main() {
         }
     }
 
+  // Reduce the numerator to denominator to the lowest fraction.
   for(int i = 2; i <= numerator / 2 + 1; i++)
     if(numerator % i == 0 and denom % i == 0) {
       numerator /= i;
@@ -41,7 +43,7 @@ int main() {
 }
 
 void getCommonRemoved(int &n, int &d) {
-  if(n % 10 == 0 and d % 10 == 0)         // Trivial case.
+  if(n % 10 == 0 and d % 10 == 0)         // Trivial case. Eg. (20 / 30) = (2 / 3). However, it is not considered.
     return;
 
   std::vector<int> numerator;
