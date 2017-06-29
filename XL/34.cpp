@@ -8,7 +8,7 @@
 
 #include <iostream>
 
-long getFactorial(long);
+long getFactorial(int);
 
 int main() {
   /**
@@ -20,7 +20,7 @@ int main() {
     In a similar way, if the digits are increased by one, the sum will increase by 9!, which is 362880, so can never
     equal the corresponding number. So, our valid bound is upto 7 digit ie. 2540160.
   */
-  
+
   const long LIMIT = 2540160;
   long numSum = 0;
 
@@ -39,7 +39,7 @@ int main() {
   return 0;
 }
 
-long getFactorial(long num) {
+long getFactorial(int num) {
   if(num == 0 or num == 1)
     return 1;
 
