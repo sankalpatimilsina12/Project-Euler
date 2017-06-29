@@ -10,8 +10,8 @@
 #include <iostream>
 #include <cmath>
 
-bool isPrime(long);
 int getLength(long);
+bool isPrime(long);
 
 int main() {
   const long LIMIT = 1000000;
