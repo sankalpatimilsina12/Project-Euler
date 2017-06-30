@@ -18,11 +18,9 @@ int main() {
   long sum = 0;
 
   for(long i = 0; i < LIMIT; i++) {
-    std::string iStr = toString(i);
-    if(isPalindrome(iStr)) {
+    if(isPalindrome(toString(i)))
       if(isPalindrome(toBinary(i)))
         sum += i;
-    }
   }
 
   std::cout << "The sum is: " << sum << std::endl;
@@ -51,6 +49,6 @@ bool isPalindrome(std::string num) {
 
   for(int i = num.length() - 1; i >= 0; i--)
     revStr += num[i];
-    
+
   return (num == revStr);
 }
