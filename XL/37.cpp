@@ -18,14 +18,14 @@ int main() {
   int countPrimes = 0;
   long sum = 0;
 
+  // For every prime num, truncate from both sides and see if the results are also primes.
   for(long i = 8; countPrimes != 11; i++) {
     if(checkPrime(i)) {
       int numLen = getLength(i);
-      int tempILeft = i, tempIRight = i;
+      long tempILeft, tempIRight;
       while(--numLen) {
         tempILeft = i % (long)pow(10, numLen);
         tempIRight = i / (long)pow(10, numLen);
-
         if(!checkPrime(tempILeft) or !checkPrime(tempIRight))
           break;
       }
