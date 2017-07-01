@@ -47,6 +47,8 @@ int main() {
         (numStr > largestNum) ? (largestNum = numStr) : "";
       }
     }
+    if(i == 98) i = 911;
+    else if(i == 987) i = 9122;
   }
   std::cout << "The largest 1 to 9 pandigital number is: " << largestNum << std::endl;
   return 0;
