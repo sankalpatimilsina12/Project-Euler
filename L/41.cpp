@@ -15,7 +15,6 @@ std::string toString(long);
 bool isPandigital(std::string);
 bool isPrime(long);
 
-long largestPanDigitalPrime;
 int main() {
   /**
     9-digit pandigital = 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 45
@@ -33,15 +32,15 @@ int main() {
     Combining and generalising, our limit is from 1234 to 7654321.
 
   */
-  for(long i = 7654321; i >= 1234; i--) {
+  long i;
+  for(i = 7654321; i >= 1234; i--) {
     if(isPandigital(toString(i)))
       if(isPrime(i)) {
-        largestPanDigitalPrime = i;
         break;
       }
       if(i == 1234567) i = 4321;
   }
-  std::cout << "The largest n-digit pandigital prime is: " << largestPanDigitalPrime << std::endl;
+  std::cout << "The largest n-digit pandigital prime is: " << i << std::endl;
   return 0;
 }
 
