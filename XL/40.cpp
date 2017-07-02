@@ -20,7 +20,7 @@ int main() {
   // Go on appending integers to the fraction string and take values at every increasing power of 10.
   int mulProduct = 1;
   std::string fraction;
-  for(long i = 1, tenthPower = 0; tenthPower != 6; i++) {
+  for(long i = 1, tenthPower = 0; tenthPower != 7; i++) {
     fraction += toString(i);
     if(i / pow(10, tenthPower) == 1) {
       mulProduct *= fraction[(int)pow(10, tenthPower) - 1] - '0';
