@@ -34,7 +34,7 @@ int main() {
 
   std::vector<long> pentNumbers;
   long pentDiff;
-  bool flag;                    // To indicate that we have found the final pair satisfying the conditions.
+  bool flag = false;                    // To indicate that we have found the final pair satisfying the conditions.
 
   for(long i = 0; ; i++) {
     long pentSum;
