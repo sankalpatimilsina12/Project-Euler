@@ -17,7 +17,6 @@
 #include <iostream>
 #include <cmath>
 
-bool isComposite(int);
 bool isPrime(int);
 
 int main() {
@@ -28,7 +27,7 @@ int main() {
   bool flag = false;
   int i;
   for(i = 9; ; i += 2) {
-    if(isComposite(i)) {
+    if(!isPrime(i)) {             // ie. a composite number.
       for(int j = 2; j < i; j++) {
         if(isPrime(j)) {
           for(int k = 1; ; k++) {
@@ -52,13 +51,6 @@ int main() {
   }
   std::cout << "The required smallest odd composite number is: " << i << std::endl;
   return 0;
-}
-
-bool isComposite(int num) {
-  for(int i = 2; i <= sqrt(num); i++)
-    if(num % i == 0)
-      return true;
-  return false;
 }
 
 bool isPrime(int num) {
