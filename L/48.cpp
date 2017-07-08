@@ -19,7 +19,7 @@ int main() {
   for(int i = 1; i <= 1000; i++) {
     std::string tempPowerStr = getPowered(i, i);
     std::string tempSumStr;
-    // Make length of sumStr and tempStr same.
+    // Make length of sumStr and tempPowerStr same.
     sumStr = std::string(tempPowerStr.length() - sumStr.length(), '0') + sumStr;
     int carry = 0, sum;
     for(int j = tempPowerStr.length() - 1; j >= 0; j--) {
@@ -42,6 +42,7 @@ int main() {
   std::cout << sumStr << std::endl;
   return 0;
 }
+
 std::string getPowered(int a, int b) {
   /**
     * Convert each number to its string representation.
@@ -57,7 +58,6 @@ std::string getPowered(int a, int b) {
   for(int i = 1; i < b; i++) {
     int carry = 0;
     std::string tempStr;
-    bool flag = false;
     // Mulitply the current number by 'a'.
     for(int j = strNum.length() - 1; j >= 0; j--) {
       int prod = (strNum[j] - '0') * a + carry;
