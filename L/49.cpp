@@ -47,10 +47,7 @@ int main() {
 
   // Print the next three terms that is not the one in question.
   std::string num;
-  int i = 0;
-  if(permutationsWithCommonDifference[0] == 1487)
-    i = 3;
-  for(; i < permutationsWithCommonDifference.size(); i++)
+  for(int i = 3; i < permutationsWithCommonDifference.size(); i++)
     num += toString(permutationsWithCommonDifference[i]);
 
   std::cout << num << std::endl;
@@ -64,6 +61,10 @@ bool isPrime(int num) {
   return true;
 }
 
+/**
+  This function checks if the functional arguments are permutations
+  to one another.
+*/
 bool isPermutations(int num1, int num2) {
   std::ostringstream ss;
   ss << num1;
