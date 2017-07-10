@@ -47,7 +47,10 @@ int main() {
 
   // Print the next three terms that is not the one in question.
   std::string num;
-  for(int i = 3; i < permutationsWithCommonDifference.size(); i++)
+  int start = 0;
+  if(permutationsWithCommonDifference[0] == 1487)
+    start = 3;
+  for(int i = start; i < start + 3; i++)
     num += toString(permutationsWithCommonDifference[i]);
 
   std::cout << num << std::endl;
