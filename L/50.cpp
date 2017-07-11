@@ -17,16 +17,16 @@
 
 /**
   We start generating sequences starting from 2, 3, and so on. For every generated sequence, we update the
-  largest sequence count to refect the largest count possible which could be from any starting prime. However, our
-  limit of starting primes ends at the condition where the current starting prime combined with previous largest 
-  sequence count ie. we go from current starting prime and go on adding next primes for 'largest sequence count' number
-  of times and if this gives the sequence sum which reaches or exceeds our limit ie. one million, we stop generating
-  further sequences.
+  largest sequence count to refect the largest count possible which could be from any starting prime. However,
+  we stop generating sequences at the condition where the current starting prime combined with previous largest 
+  sequence count reaches or exceeds our limit ie. we go from current starting prime and go on adding next primes 
+  for 'largest sequence count' number of times and if this gives the sequence sum which reaches or exceeds our 
+  limit ie. one million, we stop generating further sequences.
 */
 
 bool isPrime(long);
-long getNextPrime(long);
-int getSequenceCount(long);
+long getNextPrime(int);
+int getSequenceCount(int);
 long getSequenceSum(int, int);
 
 int main() {
@@ -48,7 +48,7 @@ bool isPrime(long num) {
   return true;
 }
 
-long getNextPrime(long num) {
+long getNextPrime(int num) {
   num++;
   for(int i = 2; i <= sqrt(num); i++)
     if(num % i == 0) {
@@ -64,7 +64,7 @@ long getNextPrime(long num) {
   For eg. for the sequence of primes below 100, if starting prime is 2, the sequence is: 2, 3, 5, 7, 11, 13 adding
   to 41, which is the longest consecutive primes adding to a prime below 100. Hence, the sequence count returned is 6.
 */
-int getSequenceCount(long startPrime) {
+int getSequenceCount(int startPrime) {
   long sum = startPrime; 
   int sequenceCount = 1, primeSequenceCount = 0;
   for(int i = startPrime; sum < LIMIT; ) {
